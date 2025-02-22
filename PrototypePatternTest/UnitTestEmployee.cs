@@ -6,7 +6,7 @@ namespace PrototypePatternTest
     {
         public static Employee GetTestEmployee()
         {
-            return new Employee(new FullName("Иванов", "Иван", "Иванович"), 45, "Преподаватель");
+            return new Employee(new FullName("РРІР°РЅРѕРІ", "РРІР°РЅ", "РРІР°РЅРѕРІРёС‡"), 45, "РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ");
         }
 
         [Fact]
@@ -30,7 +30,7 @@ namespace PrototypePatternTest
             Employee employee = GetTestEmployee();
             Employee employeeDeepCopy = employee.DeepCopy();
             employeeDeepCopy.FullName = new FullName();
-            employeeDeepCopy.Position = "Директор";
+            employeeDeepCopy.Position = "Р”РёСЂРµРєС‚РѕСЂ";
 
             // Act
             bool result = employeeDeepCopy.Equals(employee);
@@ -61,7 +61,7 @@ namespace PrototypePatternTest
             Employee employee = GetTestEmployee();
             Employee employeeDeepCopy = employee.DeepCopy();
             Employee employeeShallowCopy = employee.ShallowCopy();
-            employee.FullName!.Name = "Петров";
+            employee.FullName!.Name = "РџРµС‚СЂРѕРІ";
 
             // Act
             bool result = !employeeDeepCopy.Equals(employeeShallowCopy) && employee.Equals(employeeShallowCopy);

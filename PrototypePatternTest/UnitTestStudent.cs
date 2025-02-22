@@ -1,4 +1,4 @@
-using ImplementingPrototypePattern;
+п»їusing ImplementingPrototypePattern;
 
 namespace PrototypePatternTest;
 
@@ -6,7 +6,7 @@ public class UnitTestStudent
 {
     public static Student GetTestStudent()
     {
-        return new Student(new FullName("Иванов", "Иван", "Петрович"), 18, "Group-9");
+        return new Student(new FullName("РРІР°РЅРѕРІ", "РРІР°РЅ", "РџРµС‚СЂРѕРІРёС‡"), 18, "Group-9");
     }
 
     [Fact]
@@ -61,7 +61,7 @@ public class UnitTestStudent
         Student student = GetTestStudent();
         Student studentDeepCopy = student.DeepCopy();
         Student studentShallowCopy = student.ShallowCopy();
-        student.FullName!.Name = "Петров";
+        student.FullName!.Name = "РџРµС‚СЂРѕРІ";
 
         // Act
         bool result = !studentDeepCopy.Equals(studentShallowCopy) && student.Equals(studentShallowCopy);

@@ -1,4 +1,4 @@
-using ImplementingPrototypePattern;
+п»їusing ImplementingPrototypePattern;
 
 namespace PrototypePatternTest;
 
@@ -6,7 +6,7 @@ public class UnitTestPerson
 {
     public static Person GetTestPerson()
     {
-        Person person = new Person(new FullName() { LastName = "Иванов", Name = "Иван", Patronymic = "Иванович" }, 25);
+        Person person = new Person(new FullName() { LastName = "РРІР°РЅРѕРІ", Name = "РРІР°РЅ", Patronymic = "РРІР°РЅРѕРІРёС‡" }, 25);
         person.ProgrammingLanguages = new List<string>() {
             "C#", "TS", "SQL"
         };
@@ -64,7 +64,7 @@ public class UnitTestPerson
         Person person = GetTestPerson();
         Person personDeepCopy = person.DeepCopy();
         Person personShallowCopy = person.ShallowCopy();
-        person.FullName!.Name = "Петров";
+        person.FullName!.Name = "РџРµС‚СЂРѕРІ";
 
         // Act
         bool result = !personDeepCopy.Equals(personShallowCopy) && person.Equals(personShallowCopy);

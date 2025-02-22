@@ -1,4 +1,4 @@
-using ImplementingPrototypePattern;
+п»їusing ImplementingPrototypePattern;
 
 namespace PrototypePatternTest
 {
@@ -6,7 +6,7 @@ namespace PrototypePatternTest
     {
         public static Teacher GetTestTeacher()
         {
-            Teacher teacher = new Teacher(new FullName("Иванов", "Иван", "Иванович"), 45, "Преподаватель");
+            Teacher teacher = new Teacher(new FullName("РРІР°РЅРѕРІ", "РРІР°РЅ", "РРІР°РЅРѕРІРёС‡"), 45, "РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ");
             teacher.ProgrammingLanguages = new List<string>() { "C#" };
             teacher.Students = new List<Student>()
             {
@@ -66,7 +66,7 @@ namespace PrototypePatternTest
             Teacher Teacher = GetTestTeacher();
             Teacher TeacherDeepCopy = Teacher.DeepCopy();
             Teacher TeacherShallowCopy = Teacher.ShallowCopy();
-            Teacher.FullName!.Name = "Петров";
+            Teacher.FullName!.Name = "РџРµС‚СЂРѕРІ";
 
             // Act
             bool result = !TeacherDeepCopy.Equals(TeacherShallowCopy) && Teacher.Equals(TeacherShallowCopy);
