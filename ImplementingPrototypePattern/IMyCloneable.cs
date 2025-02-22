@@ -1,5 +1,7 @@
 ﻿namespace ImplementingPrototypePattern;
 
-public interface IMyCloneable
+public interface IMyCloneable<T>
 {
+    T ShallowCopy();
+    T DeepCopy();
 }
