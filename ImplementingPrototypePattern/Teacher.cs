@@ -1,6 +1,6 @@
 ﻿namespace ImplementingPrototypePattern;
 
-public class Teacher : Employee, ICloneable, IEquatable<Teacher>
+public class Teacher : Employee, IEquatable<Teacher>
 {
     public List<Student>? Students { get; set; }
     public Teacher() { }

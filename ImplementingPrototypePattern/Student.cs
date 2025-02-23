@@ -1,6 +1,6 @@
 ﻿namespace ImplementingPrototypePattern;
 
-public class Student : Person, ICloneable, IEquatable<Student>
+public class Student : Person, IEquatable<Student>
 {
     public string? GroupName { get; set; }
     public Student() { }

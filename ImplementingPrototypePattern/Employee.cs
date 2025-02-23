@@ -1,6 +1,6 @@
 ﻿namespace ImplementingPrototypePattern;
 
-public class Employee : Person, ICloneable, IEquatable<Employee>
+public class Employee : Person, IEquatable<Employee>
 {
     public string? Position { get; set; }
     public Employee() { }
